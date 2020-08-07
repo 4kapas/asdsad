@@ -18,8 +18,8 @@ var y_on = 0;                       //세로방향 키보드 눌림 감지
 
 var br_width = $(".game").innerWidth();     //게임 창 가로크기
 var br_height = $(".game").innerHeight();   //게임 창 세로크기
-var pc_width = 152;             //pc.innerWidth(); 주인공 캐릭터 가로크기
-var pc_height = 120;           //pc.innerHeight(); 주인공 캐릭터 세로크기
+var pc_width = pc.innerWidth();             //주인공 캐릭터 가로크기
+var pc_height = pc.innerHeight();           //주인공 캐릭터 세로크기
 /* // 변수 저장 */
 
 
