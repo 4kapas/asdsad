@@ -114,34 +114,44 @@ console.log(slidecounter);
         
     }
     $(document).ready(function () {
-var cont = $('.sect2 >div');
-var cont2 = $('.sect2 ul li');
+
                 
 
 
         $('.sect2 ul li').click(function () {
             $('.sect2 ul li').removeClass();
             $(this).addClass('active');
-      $('.mam1').css('display','inline-flex');
+      $('.mam1').show();
       $('.mam2,.mam3,.mam4').hide();
  
   
         });
   $('.sect2 ul li:nth-child(2)').click(function () {
-      $('.mam2').css('display','inline-flex');
+     $('.mam2').show();
       $('.mam1,.mam3,.mam4').hide();
  
   
         }); $('.sect2 ul li:nth-child(3)').click(function () {
-      $('.mam3').css('display','inline-flex');
+          $('.mam3').show();
       $('.mam2,.mam1,.mam4').hide();
  
   
         });$('.sect2 ul li:nth-child(4)').click(function () {
-      $('.mam4').css('display','inline-flex');
+        $('.mam4').show();
       $('.mam1,.mam2,.mam3').hide();
  
   
         });
   
  });
+$(window).resize(function (){
+  // width값을 가져오기
+  var width_size = window.outerWidth;
+
+  // 800 이하인지 if문으로 확인
+  if (width_size < 535) {
+//      alert('he');
+     $('.flexbox').css('display: inline-block');
+
+  } 
+});
