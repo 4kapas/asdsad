@@ -143,15 +143,30 @@ console.log(slidecounter);
   
         });
   
- });
+ }); 
 $(window).resize(function (){
   // width값을 가져오기
   var width_size = window.outerWidth;
 
   // 800 이하인지 if문으로 확인
-  if (width_size < 535) {
+  if (width_size < 836) {
 //      alert('he');
      $('.flexbox').css('display: inline-block');
+  $('.hnf-accordion__content').hide(); 
+  } if (width_size > 838) {
+//      alert('he');
+     $('.hnf-accordion__content').show(); 
 
   } 
+});
+
+$(document).ready(function(){
+//    $('.hnf-accordion__content').slideUp();
+//    $('.hnf-accordion__item .hnf-accordion__content').slideToggle();
+     
+    $('.hnf-accordion__title.h4.noo, .hnf-footer .hnf-accordion__heading svg').on('click',function(){
+   
+$(this).parent().parent().next().toggle();
+    });
+  
 });
